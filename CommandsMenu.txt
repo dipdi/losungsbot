@@ -1,0 +1,4 @@
+abonnieren - Losungen abonieren, diese werden dir zukünftig einmal am Tag gesendet.
+abbestellen - Losungen abbestellen, diese werden dir in Zunkunft nicht mehr gesendet.
+heute - Die heutige Losung einmalig abrufen.
+uhrzeit - Die Uhrzeit für die Losung verändern.

@@ -1,0 +1,14 @@
+xml.losungen=data/Losungen Free 2015.xml
+xml.empfaenger=data/Empfaenger.xml
+
+bot.url=https://api.telegram.org/bot
+
+bot.token=
+
+#GruppenChat oder Einzelperson angeben, die Logmeldungen empfängt
+
+bot.logchat=
+
+#hour muss 0-23 sein, ohne führende Null; minutes 00-59
+push.hour=9
+push.minute=00

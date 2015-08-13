@@ -1,0 +1,9 @@
+.classpath
+.project
+.settings
+.DS_store
+target
+logs
+data
+deploy*.sh
+*.DS_Store

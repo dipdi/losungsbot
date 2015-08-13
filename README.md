@@ -1,0 +1,1 @@
+This a Bot for Telegram. Properties in src/main/resources
