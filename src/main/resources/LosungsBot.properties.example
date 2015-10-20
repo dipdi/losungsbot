@@ -1,7 +1,9 @@
+# Remove the extension .example and modify it for your needs.
+
 xml.losungen=data/Losungen Free 2015.xml
 xml.empfaenger=data/Empfaenger.xml
 
-bot.url=https://api.telegram.org/bot
+#bot.url=https://api.telegram.org/bot
 
 bot.token=
 
