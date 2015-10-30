@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="warn">
 	<Appenders>
-		<File name="File" fileName="logs/LosungsBot.log">
+		<File name="InfoFile" fileName="logs/LosungsBot.log">
 			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
 		</File>
+		<File name="DebugFile" fileName="logs/LosungsBotDebug.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n" />
+        </File>
 	</Appenders>
 	<Loggers>
 		<Root level="info">
-			<AppenderRef ref="File" />
+			<AppenderRef ref="InfoFile" />
 		</Root>
+		<Root level="debug">
+            <AppenderRef ref="DebugFile" />
+        </Root>
 	</Loggers>
 </Configuration>
