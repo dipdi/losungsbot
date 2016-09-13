@@ -7,6 +7,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement(namespace = "de.vivistra.losungsbot.model.AlleEmpfaenger")
 public class Empfaenger {
+	@XmlElement(type=Long.class)
 	private long id;
 	private int hour;
 	private int minute;
