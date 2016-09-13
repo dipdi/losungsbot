@@ -1,13 +1,13 @@
 package de.vivistra.losungsbot.model;
 
+import de.vivistra.losungsbot.settings.Settings;
+
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-import de.vivistra.losungsbot.settings.Settings;
-
 @XmlRootElement(namespace = "de.vivistra.losungsbot.model.AlleEmpfaenger")
 public class Empfaenger {
-	private int id;
+	private long id;
 	private int hour;
 	private int minute;
 	private String firstName;
@@ -21,18 +21,18 @@ public class Empfaenger {
 		this.minute = Settings.getMinutesOfPush();
 	}
 
-	public Empfaenger(int id, int hour, int minute, String firstName) {
+	public Empfaenger(long id, int hour, int minute, String firstName) {
 		this.id = id;
 		this.hour = hour;
 		this.minute = minute;
 		this.firstName = firstName;
 	}
 
-	public Empfaenger(int id, String firstName) {
+	public Empfaenger(long id, String firstName) {
 		this(id, Settings.getHourOfPush(), Settings.getMinutesOfPush(), firstName);
 	}
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 

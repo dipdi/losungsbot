@@ -1,18 +1,17 @@
 package de.vivistra.losungsbot.model;
 
-import java.util.ArrayList;
-import java.util.GregorianCalendar;
-import java.util.Iterator;
-import java.util.NoSuchElementException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import java.util.ArrayList;
+import java.util.GregorianCalendar;
+import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 /**
  * Daten Model zu AlleLosungen, es enthält eine ArrayList mit allen Losungen,
@@ -21,7 +20,7 @@ import org.apache.logging.log4j.Logger;
  * @author danielketterer
  *
  */
-@XmlRootElement
+@XmlRootElement(name = "FreeXml")
 public class AlleLosungen {
 	private static final Logger LOG = LogManager.getLogger();
 	private static ArrayList<Losungen> alleLosungen;
@@ -39,7 +38,7 @@ public class AlleLosungen {
 		return alleLosungen;
 	}
 
-	@XmlElement(name = "losungen")
+	@XmlElement(name = "Losungen")
 	public void setAlleLosungen(ArrayList<Losungen> aLosungen) {
 		alleLosungen = aLosungen;
 	}

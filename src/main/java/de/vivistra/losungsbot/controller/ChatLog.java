@@ -13,7 +13,7 @@ public class ChatLog {
 	public static void send(String message) {
 
 		try {
-			int chat = Settings.getLogChat();
+			long chat = Settings.getLogChat();
 
 			Sender.send(new TextMessage(chat, message));
 

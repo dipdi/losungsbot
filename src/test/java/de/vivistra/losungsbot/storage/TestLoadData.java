@@ -1,15 +1,14 @@
 package de.vivistra.losungsbot.storage;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-
-import java.util.GregorianCalendar;
-
+import de.vivistra.losungsbot.model.AlleLosungen;
+import de.vivistra.losungsbot.model.Losungen;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import de.vivistra.losungsbot.model.AlleLosungen;
-import de.vivistra.losungsbot.model.Losungen;
+import java.util.GregorianCalendar;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class TestLoadData {
 	@BeforeClass
@@ -22,12 +21,12 @@ public class TestLoadData {
 		AlleLosungen alleLosungen = AlleLosungen.getInstance();
 		System.out.println(alleLosungen.getAlleLosungen().get(0));
 		GregorianCalendar date = new GregorianCalendar();
-		date.set(2015, 5, 30);
+		date.set(2016, 0, 1); // 0 = January
 		System.out.println(date);
 		Losungen losung = alleLosungen.suchen(date);
 		System.out.println(losung);
 		assertNotNull(losung);
-		assertTrue(losung.getLehrText().equals("Der Herr ist treu; der wird euch stärken und bewahren vor dem Bösen."));
+		assertEquals("Danket dem Herrn aller Herren, der allein große Wunder tut, denn seine Güte währet ewiglich.", losung.getLosungsText());
 
 	}
 

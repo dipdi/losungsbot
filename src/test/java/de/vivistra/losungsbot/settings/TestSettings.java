@@ -1,14 +1,14 @@
 package de.vivistra.losungsbot.settings;
 
-import static org.junit.Assert.assertEquals;
-
 import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
 
 public class TestSettings {
 
 	@Test
 	public void testGetPathToLosungen() {
-		assertEquals("data/Losungen Free 2015.xml", Settings.getPathToLosungen());
+		assertEquals("data/Losungen Free 2016.xml", Settings.getPathToLosungen());
 	}
 
 	@Test

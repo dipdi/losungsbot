@@ -1,17 +1,16 @@
 package de.vivistra.losungsbot.controller;
 
-import java.util.GregorianCalendar;
-import java.util.StringTokenizer;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import de.vivistra.losungsbot.model.AlleEmpfaenger;
 import de.vivistra.losungsbot.model.AlleLosungen;
 import de.vivistra.losungsbot.model.Empfaenger;
 import de.vivistra.losungsbot.model.Losungen;
 import de.vivistra.telegrambot.model.message.TextMessage;
 import de.vivistra.telegrambot.sender.Sender;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.util.GregorianCalendar;
+import java.util.StringTokenizer;
 
 public class ProcessMessage {
 	private static final Logger LOG = LogManager.getLogger();
@@ -34,7 +33,7 @@ public class ProcessMessage {
 		AlleEmpfaenger alleEmpfaenger = AlleEmpfaenger.getInstance();
 
 		// Empfänger: GruppenChat oder Einzelperson
-		Integer recipient = message.isFromGroupChat() ? message.getGroupChat().getId() : message.getSender().getId();
+		Long recipient = message.isFromGroupChat() ? message.getGroupChat().getId() : message.getSender().getId();
 
 		switch (command) {
 		case "START":

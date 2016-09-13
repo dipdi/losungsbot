@@ -9,7 +9,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *
  * @author danielketterer
  */
-@XmlRootElement(namespace = "de.vivistra.losungsbot.model.AlleLosungen")
+@XmlRootElement
 public class Losungen {
 
 	// XMLGregorianCalender ist die Repräsentation von xs:dateTime in Java.
@@ -28,7 +28,7 @@ public class Losungen {
 		return datum;
 	}
 
-	@XmlElement(name = "datum")
+	@XmlElement(name = "Datum")
 	public void setDatum(XMLGregorianCalendar datum) {
 		this.datum = datum;
 	}
@@ -37,7 +37,7 @@ public class Losungen {
 		return sonntag;
 	}
 
-	@XmlElement
+	@XmlElement(name = "Sonntag")
 	public void setSonntag(String sonntag) {
 		this.sonntag = sonntag;
 	}
@@ -46,7 +46,7 @@ public class Losungen {
 		return losungsText;
 	}
 
-	@XmlElement
+	@XmlElement(name = "Losungstext")
 	public void setLosungsText(String losungsText) {
 		this.losungsText = losungsText;
 	}
@@ -55,7 +55,7 @@ public class Losungen {
 		return lehrText;
 	}
 
-	@XmlElement
+	@XmlElement(name = "Lehrtext")
 	public void setLehrText(String lehrText) {
 		this.lehrText = lehrText;
 	}
@@ -64,7 +64,7 @@ public class Losungen {
 		return losungsVers;
 	}
 
-	@XmlElement
+	@XmlElement(name = "Losungsvers")
 	public void setLosungsVers(String losungsVers) {
 		this.losungsVers = losungsVers;
 	}
@@ -73,7 +73,7 @@ public class Losungen {
 		return lehrTextVers;
 	}
 
-	@XmlElement
+	@XmlElement(name = "Lehrtextvers")
 	public void setLehrTextVers(String lehrTextVers) {
 		this.lehrTextVers = lehrTextVers;
 	}
@@ -82,7 +82,7 @@ public class Losungen {
 		return wTag;
 	}
 
-	@XmlElement
+	@XmlElement(name = "Wtag")
 	public void setwTag(String wTag) {
 		this.wTag = wTag;
 	}

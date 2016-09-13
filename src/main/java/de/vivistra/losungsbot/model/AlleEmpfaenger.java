@@ -1,16 +1,14 @@
 package de.vivistra.losungsbot.model;
 
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-
+import de.vivistra.losungsbot.controller.PushLosung;
+import de.vivistra.losungsbot.storage.LoadData;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import de.vivistra.losungsbot.controller.PushLosung;
-import de.vivistra.losungsbot.storage.LoadData;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+import java.util.HashSet;
+import java.util.Set;
 
 @XmlRootElement(name = "recipients")
 public class AlleEmpfaenger {
@@ -41,7 +39,7 @@ public class AlleEmpfaenger {
 		saveToDisk();
 	}
 
-	public void remove(Integer empfaenger) {
+	public void remove(long empfaenger) {
 		Empfaenger empf = getEmpfaengerById(empfaenger);
 
 		if (empf == null) {
@@ -86,7 +84,7 @@ public class AlleEmpfaenger {
 		LoadData.speichereEmpfaenger();
 	}
 
-	public Empfaenger getEmpfaengerById(int id) {
+	public Empfaenger getEmpfaengerById(long id) {
 		for (Empfaenger empf : alleEmpfaenger) {
 			if (empf.getId() == id) {
 				return empf;
